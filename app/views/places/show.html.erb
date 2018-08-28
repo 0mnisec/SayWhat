@@ -1,45 +1,29 @@
-<p id="notice"><%= notice %></p>
-
+<div class="row">
+<div class="col-sm-3">
+<h3><%= @place.name %></h3>
 <p>
-  <strong>Name:</strong>
-  <%= @place.name %>
-</p>
-
+<strong>Address:</strong>
+<%= @place.address %></p>
 <p>
-  <strong>Address:</strong>
-  <%= @place.address %>
-</p>
-
+<strong>Phone:</strong>
+<%= @place.phone %></p>
 <p>
-  <strong>Description:</strong>
-  <%= @place.description %>
-</p>
-
+<strong>Website:</strong>
+<%= @place.website %></p>
 <p>
-  <strong>Phone:</strong>
-  <%= @place.phone %>
-</p>
-
-<p>
-  <strong>Website:</strong>
-  <%= @place.website %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @place.user_id %>
-</p>
-
-<%= @place.latitude %>
-<%= @place.longitude %>
-
+<strong>Description:</strong>
+<%= @place.description %></p>
 <div id="map" style="width: 230px; height: 230px;"></div>
 
+</div>
 
-<%= link_to 'Edit', edit_place_path(@place) %> |
-<%= link_to 'Back', places_path %>
+<div class="col-sm-9">
+<h3>Reviews by people</h3>
+</div>
 
-<script>
+</div>
+
+<script type="text/javascript">
       var map;
       var myCenter = { lat: <%= @place.latitude %>, lng: <%= @place.longitude %> }
       function initMap() {
